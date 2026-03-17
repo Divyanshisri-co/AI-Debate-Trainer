@@ -1,77 +1,81 @@
 # AI-Debate-Trainer
-AI Debate Trainer is an interactive web application where users can debate with an AI system on any topic. The system evaluates the debate and provides scores for logic, clarity, and confidence, and declares a winner.
+# AI Debate Trainer
 
-Features
+AI Debate Trainer is a web application where a user can debate with an AI system on a selected topic.
+The user chooses the debate topic, duration, and stance (favor or against). The AI automatically takes the opposite side and generates counterarguments. When the debate time ends, the AI judge evaluates the arguments and declares the winner with scores.
 
-User selects debate topic
+---
 
-Select debate time (5 / 10 / 15 minutes)
+## Features
 
-Choose debate stance (Favor / Against)
+* Enter custom debate topic
+* Choose debate duration (5 / 10 / 15 minutes)
+* Select debate stance (Favor or Against)
+* AI automatically argues the opposite side
+* Real-time debate interaction
+* Countdown timer for debate duration
+* AI judge evaluates debate after time ends
+* Result dashboard showing:
 
-Real-time AI counterarguments
+  * Winner
+  * Logic score
+  * Clarity score
+  * Confidence score
+  * Two reasons for the decision
 
-Debate timer
+---
 
-AI judge evaluates performance
+## Tech Stack
 
-Result dashboard with:
+Backend
 
-Logic score
+* Python
+* Django
 
-Clarity score
+AI Model
 
-Confidence score
+* Groq API
+* LLaMA 3.1 model
 
-Winner announcement
+Frontend
 
-Reasons for the decision
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
 
-Tech Stack
+---
 
-Backend:
+## Project Workflow
 
-Python
+1. User enters debate topic.
+2. User selects debate time.
+3. User selects stance (Favor / Against).
+4. Debate starts and AI responds with counterarguments.
+5. Timer runs during the debate.
+6. When time ends, debate stops automatically.
+7. AI judge analyzes the conversation.
+8. Result dashboard displays winner and evaluation scores.
 
-Django
+---
 
-AI:
+## Installation
 
-Groq API
+Clone the repository
 
-LLaMA 3.1 Model
+git clone https://github.com/yourusername/ai-debate-trainer.git
 
-Frontend:
+cd ai-debate-trainer
 
-HTML
-
-CSS
-
-Bootstrap
-
-JavaScript
-
-How It Works
-
-User enters debate topic and selects time.
-
-User chooses whether they are in favor or against the topic.
-
-AI takes the opposite side automatically.
-
-Debate continues until the timer ends.
-
-AI judge analyzes the arguments and declares the winner.
-
-Installation
+Install dependencies
 
 pip install -r requirements.txt
 
-Add your Groq API key inside:
+Add your Groq API key in:
 
 debate/ai_service.py
 
-Run the server
+Run the project
 
 python manage.py runserver
 
@@ -79,6 +83,18 @@ Open in browser
 
 http://127.0.0.1:8000
 
+---
 
+## Future Improvements
 
-Author: Divyanshisri-co
+* Debate history storage using database
+* Grammar correction for user arguments
+* Speech-based debate (voice input)
+* Real-time scoring during debate
+* Multiple AI debate personalities
+
+---
+
+## Author
+
+B.Tech Computer Science with Artificial Intelligence
