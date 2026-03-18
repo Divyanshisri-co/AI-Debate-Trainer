@@ -86,7 +86,7 @@ http://127.0.0.1:8000
 ## django commands 
 
 # create project
-* django-admin startproject ai_debate_trainer
+* python -m django startproject ai_debate_trainer ( if django not installed globally)
 * cd ai_debate_trainer
 
 # create app
