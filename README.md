@@ -83,7 +83,14 @@ Open in browser
 http://127.0.0.1:8000
 
 ---
+## django commands 
 
+# create project
+* django-admin startproject ai_debate_trainer
+* cd ai_debate_trainer
+
+# create app
+* python manage.py startapp debate
 ## Future Improvements
 
 * Debate history storage using database
