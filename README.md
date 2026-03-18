@@ -1,5 +1,4 @@
 # AI-Debate-Trainer
-# AI Debate Trainer
 
 AI Debate Trainer is a web application where a user can debate with an AI system on a selected topic.
 The user chooses the debate topic, duration, and stance (favor or against). The AI automatically takes the opposite side and generates counterarguments. When the debate time ends, the AI judge evaluates the arguments and declares the winner with scores.
