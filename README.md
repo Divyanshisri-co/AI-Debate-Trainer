@@ -171,6 +171,8 @@ AI_DEBATE_SYS/
 │   ├── settings.py
 │   ├── urls.py
 │   ├── wsgi.py
+|   ├── asgi.py
+|   ├── __init__.py
 │
 ├── debate/                   # Core app
 │   ├── views.py              # Handles logic & APIs
@@ -178,6 +180,8 @@ AI_DEBATE_SYS/
 │   ├── utils.py              # AI + scoring logic
 │   ├── models.py
 │   ├── migrations/
+|   ├── admin.py
+|   ├── app.py
 │
 ├── templates/
 │   ├── home.html
@@ -222,10 +226,12 @@ pip install -r requirements.txt
 
 ---
 
-### 4️⃣ Run Migrations
+### 4️⃣ Run
 
 ```bash
-python manage.py makemigrations
+python -m django startproject ai_debate_trainer
+cd ai_debate_trainer
+python manage.py startapp debate
 python manage.py migrate
 ```
 
@@ -241,16 +247,6 @@ Open:
 
 ```
 http://127.0.0.1:8000/
-```
-
----
-
-## 🔑 Environment Variables
-
-Create `.env` file:
-
-```env
-API_KEY=your_api_key_here
 ```
 
 ---
