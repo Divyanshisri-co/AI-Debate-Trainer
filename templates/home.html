@@ -2,19 +2,37 @@
 <html>
 <head>
     <title>AI Debate Trainer</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
             margin: 0;
             font-family: Arial;
             background: #704471;
+            padding: 10px;
         }
 
         .container {
+            width: 90%;
+            max-width: 500px;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+        input, select, button {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 15px;
+                border-radius: 10px;
+            }
+        
+            h1 {
+                font-size: 18px;
+            }
         }
 
         .card {
