@@ -1,6 +1,9 @@
 from groq import Groq
-
-client = Groq(api_key="YOUR GROQ API KEY")
+import os
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    raise ValueError("API key not found")
+client = Groq(api_key=api_key)
 
 
 def build_system_prompt(topic, stance):
