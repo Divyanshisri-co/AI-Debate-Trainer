@@ -2,6 +2,8 @@
 
 An AI-powered web application that allows users to engage in real-time debates with an intelligent AI opponent, receive instant feedback, and improve their argumentation and communication skills.
 
+Live Demo: https://ai-debate-trainer.onrender.com
+
 ---
 
 ## 📌 Project Overview
