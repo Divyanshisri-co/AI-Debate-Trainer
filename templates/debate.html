@@ -2,22 +2,27 @@
 <html>
 <head>
     <title>AI Debate</title>
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
      <style>
     body {
         margin: 0;
         font-family: 'Segoe UI', sans-serif;
-        
+        padding: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100vh;
         background: #834784;
     }
+    input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+}
 
     /* MAIN CARD */
     .container {
-        width: 1000px;
+        width: 90%;
+        max-width: 500px;
         height: 700px;
         background: white;
         border-radius: 16px;
@@ -34,6 +39,21 @@
         
     }
 
+         @media (max-width: 600px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 14px;
+    }
+}
     /* TOPIC */
     .topic-box {
         border: 2px solid #22c55e;
