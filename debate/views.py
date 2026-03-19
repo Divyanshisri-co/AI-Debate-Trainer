@@ -40,14 +40,13 @@ def start_debate(request):
         Your stance: {ai_stance}
 
         STRICT RULES:
-        - Always disagree with the user
-        - Never agree
+        -Always take the OPPOSITE side of the user.
+        - Do NOT agree with the user.
+        - Give strong counter arguments.
+        - Keep answer short (2-3 lines only).
         - Never act like a helper
         -Each response must be COMPLETE sentences
         - Do NOT cut sentences midway
-        - No questions
-        - Only 1-2 short lines
-        - Be direct and argumentative
         """
         system_prompt = build_system_prompt(topic, ai_stance)
         request.session["messages"] = [
@@ -76,6 +75,7 @@ def chat_api(request):
         user_input = request.POST.get("message")
 
         corrected = correct_english(user_input)
+        
 
         messages = request.session.get("messages", [])
 
