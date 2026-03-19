@@ -2,10 +2,11 @@
 <html>
 <head>
     <title>Result</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
 body {
     margin: 0;
+    padding: 10px;
     font-family: 'Segoe UI', sans-serif;
     background: #834784;
     display: flex;
@@ -13,10 +14,14 @@ body {
     align-items: center;
     height: 100vh;
 }
-
+input, select, button {
+    width: 100%;
+    box-sizing: border-box;
+}
 /* MAIN BOX */
 .container {
-    width: 420px;
+     width: 90%;
+    max-width: 500px;
     background: #f9fafb;
     padding: 25px;
     border-radius: 16px;
@@ -67,6 +72,17 @@ h1 {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
 }
 
 .start-btn:hover {
