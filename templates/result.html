@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Result</title>
+    
+    <style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #834784;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* MAIN BOX */
+.container {
+    width: 420px;
+    background: #f9fafb;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* TITLE */
+h1 {
+    margin-bottom: 10px;
+}
+
+/* WINNER */
+.winner-box {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #dcfce7;
+    border: 2px solid #22c55e;
+    font-weight: bold;
+}
+
+/* SCORE */
+.score-box {
+    margin-top: 20px;
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    text-align: left;
+}
+
+/* REASONS */
+.reason-box {
+    margin-top: 15px;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* BUTTON */
+.start-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: 2px solid #22c55e;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.start-btn:hover {
+    background: #22c55e;
+    color: white;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🏆 Debate Result</h1>
+
+    <div class="winner-box">
+        Winner: <span>{{ data.winner }}</span>
+    </div>
+
+    <div class="score-box">
+        <p>👤 You: {{ data.user_score }}/10</p>
+        <p>🤖 AI: {{ data.ai_score }}/10</p>
+    </div>
+
+    <div class="reason-box">
+        <p>📌 {{ data.reason1 }}</p>
+        <p>📌 {{ data.reason2 }}</p>
+    </div>
+
+    <button class="start-btn" onclick="window.location.href='debate.html'">
+    Start New Debate
+</button>
+
+</div>
+
+</body>
+</html>

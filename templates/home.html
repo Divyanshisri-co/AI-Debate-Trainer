@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Debate Trainer</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: #704471;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            width: 350px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background: green;
+            color: white;
+            border: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h1>AI Debate Trainer</h1>
+
+        <form method="POST" action="/start/">
+            {% csrf_token %}
+
+            <input type="text" name="topic" placeholder="Enter Debate Topic" required>
+
+            <select name="stance">
+                <option value="Favor">Favor</option>
+                <option value="Against">Against</option>
+            </select>
+
+            <select name="time">
+                <option value="180">3 Minutes</option>
+                <option value="300">5 Minutes</option>
+                <option value="600">10 Minutes</option>
+            </select>
+
+            <button type="submit">Start Debate</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
